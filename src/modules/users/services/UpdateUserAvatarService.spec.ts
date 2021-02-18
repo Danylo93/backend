@@ -4,18 +4,24 @@ import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import UpdateUserAvatarService from './UpdateUserAvatarService';
 import AppError from '@shared/errors/AppError';
 
-
+let fakeUsersRepository :FakeUsersRepository;
+let fakeStorageProvider :FakeStorageProvider;
+let updateUserAvatar: UpdateUserAvatarService;
 
 
 describe('UpdateUserAvatar', () => {
-    it('should be able to create a new user', async () => {
-        const fakeUsersRepository = new FakeUsersRepository();
+beforeEach(() =>{
+    const fakeUsersRepository = new FakeUsersRepository();
         const fakeStorageProvider = new FakeStorageProvider();
         
         const updateUserAvatar  =  new UpdateUserAvatarService(
          fakeUsersRepository,
          fakeStorageProvider,
         );
+})
+
+    it('should be able to create a new user', async () => {
+        
 
         const user = await fakeUsersRepository.create({
             name: 'John Doe',
