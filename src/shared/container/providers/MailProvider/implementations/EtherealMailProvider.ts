@@ -29,7 +29,10 @@ export default class EtherealMailProvider implements IMailProvider{
          to,
          subject: 'Recuperação de Senha',
          text: body,         
-     })
+     });
+
+     console.log('Message sent: %s', message.messageId);
+     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message));
         
     }
 }
