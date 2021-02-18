@@ -22,9 +22,9 @@ describe('SendForgotPasswordEmail', () => {
          fakeMailProvider = new FakeMailProvider();
          fakeUserTokensRepository = new FakeUserTokensRepository();
          sendForgotPasswordEmail  =  new SendForgotPasswordEmailService(
-             fakeUsersRepository,
-             fakeMailProvider,
+             fakeUsersRepository,             
             fakeUserTokensRepository,
+            fakeMailProvider,
             );
     });
 
