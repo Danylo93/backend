@@ -1,4 +1,5 @@
 import { Router } from 'express';
+
 import AppointmentsController from '../controllers/AppointmentsController';
 import ProviderAppointmentsController from '../controllers/ProviderAppointmentsController';
 
