@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import multer from 'multer';
-import uploadConfig from '@config/upload';
+import uploadConfig from '@config/uploads';
 
 import ProfileController from '../controllers/ProfileController';
 
@@ -14,6 +14,6 @@ profileRouter.use(ensureAuthenticated);
 profileRouter.get('/', profileController.show);
 profileRouter.put('/', profileController.update);
 
-  
+
 
 export default profileRouter;

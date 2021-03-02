@@ -6,7 +6,7 @@ const tmpFolder = path.resolve(__dirname, '..', '..', 'tmp',);
 
 export default {
   tmpFolder,
-  uploadFolder: path.resolve(tmpFolder, 'tmp') ,
+  uploadFolder: path.resolve(tmpFolder, 'uploads'), //aqui é a pasta destino
 
   storage: multer.diskStorage({
     destination: tmpFolder,
