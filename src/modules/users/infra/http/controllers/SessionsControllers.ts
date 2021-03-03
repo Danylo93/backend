@@ -8,16 +8,20 @@ export default class SessionsController {
     public async create(request: Request, response: Response): Promise<Response>{
 
         const { email, password } = request.body;
-  
+
   const authenticateUser = container.resolve(AuthenticateUserService);
 
   const { user, token } = await authenticateUser.execute({
     email,
     password,
+
   });
 
   const userWithoutPassword = {
     id: user.id,
+    avatar_url: user.avatar
+  ? `http://192.168.0.11:3333/files/${user.avatar}`
+  : null,
     name: user.name,
     email: user.email,
     created_at: user.created_at,
@@ -25,6 +29,6 @@ export default class SessionsController {
   };
 
   return response.json({ user: userWithoutPassword, token });
-  
+
     }
 }
