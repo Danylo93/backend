@@ -15,7 +15,7 @@ export default {
   defaults: {
     from: {
       email: 'contato@agenciafwdigital.com.br',
-      name: 'Danylo Oliveira',
+      name: 'Equipe Fininho Barber',
     },
   },
 } as IMailConfig;
