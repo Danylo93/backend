@@ -14,8 +14,8 @@ export default {
 
   defaults: {
     from: {
-      email: 'seu@email.com',
-      name: 'Seu Nome',
+      email: 'contato@agenciafwdigital.com.br',
+      name: 'Danylo Oliveira',
     },
   },
 } as IMailConfig;
