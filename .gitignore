@@ -1,9 +1,10 @@
 .idea/
 .vscode/
+.env
 node_modules/
 build/
 temp/
-.env
+
 .ormconfig.json
 coverage
 
