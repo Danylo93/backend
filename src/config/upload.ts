@@ -27,8 +27,8 @@ export default {
   driver: process.env.STORAGE_DRIVER,
 
   tmpFolder,
-  uploadsFolder: path.resolve(tmpFolder, 'uploads'),
-
+  uploadsFolder: path.resolve(tmpFolder, 'upload'),
+  
   multer: {
     storage: multer.diskStorage({
       destination: tmpFolder,
@@ -44,7 +44,7 @@ export default {
   config: {
     disk: {},
     aws: {
-      bucket: 'app-gobarber-2',
+      bucket: 'app-fininhobarber',
     },
   },
 } as IUploadConfig;
