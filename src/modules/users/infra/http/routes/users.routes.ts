@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import multer from 'multer';
-import uploadConfig from '@config/uploads';
+import uploadConfig from '@config/upload';
 import { container } from 'tsyringe';
 import UsersController from '../controllers/UsersController';
 
@@ -12,7 +12,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 
 const usersControllers = new UsersController;
 const usersRouter = Router();
-const upload = multer(uploadConfig);
+const upload = multer(uploadConfig.multer);
 const userAvatarController = new UserAvatarController();
 
 

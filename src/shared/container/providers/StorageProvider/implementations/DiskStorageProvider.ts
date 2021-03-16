@@ -2,7 +2,7 @@ import { IsolationLevel } from 'typeorm/driver/types/IsolationLevel';
 import IStorageProvider from '../models/IStorageProvider';
 import fs from 'fs';
 import path from 'path';
-import uploadConfig from '@config/uploads';
+import uploadConfig from '@config/upload';
 
 
 class DiskStorageProvider implements IStorageProvider{
