@@ -10,7 +10,7 @@ import { classToClass } from 'class-transformer';
 
 
 interface IRequest {
-  user_id: string;
+  user_id: string;  
   }
 
 @injectable()
@@ -29,6 +29,7 @@ class ListProvidersService {
       
       let users = await this.cacheProvider.recover<User[]>(
         `providers-list:${user_id}`,
+        
       );
   
       if (!users) {
